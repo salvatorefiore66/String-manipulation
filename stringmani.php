@@ -1,3 +1,6 @@
+// -------------------------------stringmani.php------------------------------------
+// Salvatore G. Fiore copyright 2020 www.salvatorefiore.com
+// The main purpose: library containing functions for string manipulation.
 
 // trimNonPrintable()
 // Eliminates all non printable characters from a string $str
@@ -19,6 +22,7 @@ function trimNonPrintable(&$str)
         $str = $strtmp;
 }
 
+                
 
 // trimCrLf()
 // Eliminates all cr lf  from a string $str
@@ -87,7 +91,7 @@ function replaceCrLf(&$str,$chr)
 
 
 // search_chrSlst()
-// Searched for occurrences of a series characters in a string $str.
+// Searches for occurrences of a series characters in a string $str.
 // Characters are contained in a string $needle
 // Returns the total number of needles found in the string $str (starting at 0 or $offset)
 function search_chrSlst($str,$needle,$offset = 0)
@@ -117,18 +121,16 @@ function search_chrSlst($str,$needle,$offset = 0)
 
 
 // search_chrlst()
-// Searches for first occurrence of a a series characters in a string $str.
+// Searches for first occurrence of a series of characters in a string $str.
 // Characters are contained in a string $needle
 // Returns the position in the string $str (starting at 0 or $offset)
 // or null if no matches have been found
 // The search stops at the first occurrence of characters $needle found
 // in $str
-
 function search_chrlst($str,$needle,$offset = 0)
 {
 
         $i = 0;
-     
         
         // Looping until a character is found
         $nlength = strlen($needle);
@@ -223,19 +225,15 @@ function findkeyword_highvalue($str,$arr,$partial = false)
                        $keyval = $arr[$key];                            
                }     
             }
-       
          }
-         
-        
-         return $keyval;   
-   
+         return $keyval;  
 }
 
 
 
 
 // findFirstinArray()
-// Find first occurrence of a string in an array
+// Finds first occurrence of a string in an array
 // Returns the position in the array otherwise false
 // if no matches have been found
 function findFirstinArray($str,$arr)
