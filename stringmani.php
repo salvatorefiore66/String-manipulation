@@ -1,6 +1,6 @@
 
 // trimNonPrintable()
-// Eliminate all non printable characters from a string $str
+// Eliminates all non printable characters from a string $str
 function trimNonPrintable(&$str)
 {
         $i = 0;
@@ -21,7 +21,7 @@ function trimNonPrintable(&$str)
 
 
 // trimCrLf()
-// Eliminate all cr lf  from a string $str
+// Eliminates all cr lf  from a string $str
 function trimCrLf(&$str)
 {
         $i = 0;
@@ -41,7 +41,7 @@ function trimCrLf(&$str)
 
 
 // trimSpace()
-// Eliminate all spaces from a string $str
+// Eliminates all spaces from a string $str
 function trimSpace(&$str)
 {
         $i = 0;
@@ -62,7 +62,7 @@ function trimSpace(&$str)
 
 
 // replaceCrLf()
-// Replace all cr lf  from a string $str with a character $chr
+// Replaces all cr lf  from a string $str with a character $chr
 function replaceCrLf(&$str,$chr)
 {
         $i = 0;
@@ -86,10 +86,10 @@ function replaceCrLf(&$str,$chr)
 
 
 
-
-// Search for occurrences of a series characters in a string $str.
+// search_chrSlst()
+// Searched for occurrences of a series characters in a string $str.
 // Characters are contained in a string $needle
-// Return the total number of needles found in the string $str (starting at 0 or $offset)
+// Returns the total number of needles found in the string $str (starting at 0 or $offset)
 function search_chrSlst($str,$needle,$offset = 0)
 {
 
@@ -97,7 +97,7 @@ function search_chrSlst($str,$needle,$offset = 0)
         $totchar = 0;
      
         
-        // Loop for the whole string length
+        // Looping for the whole string length
         $nlength = strlen($needle);
         $slength = strlen($str);
        
@@ -116,10 +116,10 @@ function search_chrSlst($str,$needle,$offset = 0)
 
 
 
-
-// Search for first occurrence of a a series characters in a string $str.
+// search_chrlst()
+// Searches for first occurrence of a a series characters in a string $str.
 // Characters are contained in a string $needle
-// Return the position in the string $str (starting at 0 or $offset)
+// Returns the position in the string $str (starting at 0 or $offset)
 // or null if no matches have been found
 // The search stops at the first occurrence of characters $needle found
 // in $str
@@ -130,7 +130,7 @@ function search_chrlst($str,$needle,$offset = 0)
         $i = 0;
      
         
-        // Loop until a character is found
+        // Looping until a character is found
         $nlength = strlen($needle);
         $slength = strlen($str);
        
@@ -151,7 +151,7 @@ function search_chrlst($str,$needle,$offset = 0)
 }
 
 
-
+// search_chrlstrev()
 // Like search_chrlst() but from right -  end of string $str - to the left.
 // The count starts from 0 and continues from the end of the 
 // string towards left
@@ -185,18 +185,15 @@ function search_chrlstrev($str,$needle,$offset=0)
 
 
 
-
-// Check if string $str is in  list of strings comparing
-// an exact match
+// findkeyword_highvalue()
+// Checks if string $str is in  list of strings comparing
+// an exact match.
 // The list of strings is an array with keys
 // return 0 if no keywords found otherwise highest value found
 
-// If $partial is set to true finds partial match
-// returning highest value, only if exact matches have not been found
-// This works well with languages like english. What about other
-// languages that have noun adjectives in reverse order?
-// 
-
+// If $partial is set to true it searches for partial matches
+// returning the highest value, only if exact matches have not been found.
+// This works well with languages like english.
 function findkeyword_highvalue($str,$arr,$partial = false) 
 {
 
@@ -237,7 +234,7 @@ function findkeyword_highvalue($str,$arr,$partial = false)
 
 
 
-
+// findFirstinArray()
 // Find first occurrence of a string in an array
 // Returns the position in the array otherwise false
 // if no matches have been found
@@ -253,15 +250,15 @@ function findFirstinArray($str,$arr)
               
      }
      return false;   
-   
 }
 
-
-// Find first occurrence of a string in an array
+                           
+                           
+findFirstinArrayCase()
+// Finds first occurrence of a string in an array
 // Returns the position in the array otherwise false
 // if no matches have been found
-// It is case insensitive
-
+// It is case insensitive.
 function findFirstinArrayCase($str,$arr)
 {
 
@@ -284,6 +281,3 @@ function findFirstinArrayCase($str,$arr)
 
 
 
-
-
-?>
