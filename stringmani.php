@@ -89,7 +89,28 @@ function replaceCrLf(&$str,$chr)
 }
 
 
-
+// Eliminates all cr lf  spaces and non printable
+//  characters from a string $str
+function CleanStr(&$str)
+{
+        $i = 0;
+        $strtmp;
+        
+        $slength = strlen($str);
+        
+        while($i < $slength)
+        {
+             if(ord($str[$i]) != 10 && ord($str[$i]) != 13 && $str[$i] !== " " && ord($str[$i]) > 32)
+                 $strtmp .= $str[$i];
+             $i++;
+        }
+        $str = $strtmp;
+}
+        
+                            
+                            
+                            
+                            
 // search_chrSlst()
 // Searches for occurrences of a series characters in a string $str.
 // Characters are contained in a string $needle
