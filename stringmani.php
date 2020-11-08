@@ -100,7 +100,7 @@ function CleanStr(&$str)
         
         while($i < $slength)
         {
-             if(ord($str[$i]) != 10 && ord($str[$i]) != 13 && $str[$i] !== " " && ord($str[$i]) > 32)
+             if($str[$i] !== " " && ord($str[$i]) > 32)
                  $strtmp .= $str[$i];
              $i++;
         }
